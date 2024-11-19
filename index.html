@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Hot Gadgets</title>
+  </head>
+  <body>
+    <header>
+      <nav class="w-11/12 mx-auto flex flex-col space-y-4 lg:flex-row py-4 lg:space-y-0 items-center justify-center">
+        <input
+          id="search-box"
+          class="lg:w-1/4 w-full border border-gray-400 px-4 py-3 rounded-md lg:mr-4"
+          type="text"
+          placeholder="Search"
+        />
+        <button onclick="handleSearch()" class="btn bg-blue-500 text-white">
+          Search
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <div class="flex flex-col items-center justify-center my-6">
+        <span
+        id="spinner"
+        class="loading loading-spinner loading-lg hidden"
+      ></span>
+      </div>
+      <section
+        class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 lg:gap-10 px-5 py-5 lg:px-36 lg:py-10"
+        id="phones-container"
+      ></section>
+
+      <div class="space-y-5 flex flex-col items-center justify-center mb-14">
+        <button onclick="showAllPhones()" class="btn bg-red-500 text-white">
+          Show All
+        </button>
+      </div>
+
+      <!-- Open the modal using ID.showModal() method -->
+
+      <div id="modal-container">
+    
+      </div>
+
+    </main>
+
+    <footer class="bg-base-200">
+      <div class="w-4/5 min-h-full mx-auto">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-2 border-b-2 py-10"
+        >
+          <div class="col-span-1 flex flex-col items-center lg:block md:block">
+            <h1 class="text-2xl font-bold lg:text-5xl md:text-3xl">
+              Hot Gadgets
+            </h1>
+            <p
+              class="text-normal lg:font-semibold lg:text-lg md:text-lg text-gray-400"
+            >
+              you can definitely work.
+            </p>
+          </div>
+
+          <div
+            class="flex lg:justify-around flex-col items-center space-y-4 lg:flex-row md:flex-row md:gap-4 md:space-y-0"
+          >
+            <p>icon</p>
+            <p>icon</p>
+            <p>icon</p>
+            <button
+              class="py-4 px-6 rounded-lg bg-blue-500 text-white font-bold text-xl"
+            >
+              Join Premium
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 place-items-center md:place-items-start md:grid-cols-2 gap-4 lg:grid-cols-4 py-10"
+        >
+          <nav class="flex flex-col">
+            <h6 class="footer-title">Services</h6>
+            <a class="link link-hover">Branding</a>
+            <a class="link link-hover">Design</a>
+            <a class="link link-hover">Marketing</a>
+            <a class="link link-hover">Advertisement</a>
+          </nav>
+          <nav class="flex flex-col">
+            <h6 class="footer-title">Company</h6>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+          </nav>
+          <nav class="flex flex-col">
+            <h6 class="footer-title">Legal</h6>
+            <a class="link link-hover">Terms of use</a>
+            <a class="link link-hover">Privacy policy</a>
+            <a class="link link-hover">Cookie policy</a>
+          </nav>
+          <nav class="flex flex-col">
+            <h6 class="footer-title">Company</h6>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
+
